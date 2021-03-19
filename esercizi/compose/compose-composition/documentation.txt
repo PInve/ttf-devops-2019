@@ -1,1 +1,5 @@
-Local: docker-compose -f docker-compose-local.yml up
+Local enviroment:
+	docker-compose -f docker-compose-local.yml -f docker-compose-infrastructure.yml up
+
+Test/Dev enviroment:
+	docker-compose -f docker-compose-infrastructure.yml -f docker-compose-test.yml up
