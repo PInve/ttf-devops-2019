@@ -1,5 +1,23 @@
 Local enviroment:
-	docker-compose -f docker-compose-local.yml -f docker-compose-infrastructure.yml up
+	docker-compose -f docker-compose-local.yml -f docker-compose-infrastructure.yml -f docker-compose-express.yml -f docker-compose-rcommander.yml up
 
 Test/Dev enviroment:
-	docker-compose -f docker-compose-infrastructure.yml -f docker-compose-test.yml up
+	docker-compose -f docker-compose-infrastructure.yml -f docker-compose-services.yml -f docker-compose-express.yml -f docker-compose-rcommander.yml up
+
+Production enviroment:
+	docker-compose -f docker-compose-infrastructure.yml -f docker-compose-services.yml up
+
+
+Useful commands:
+
+   docker ps  --> list containers
+   docker stop {container ID}   --> stop the container with the specified ID
+   docker-compose down --> to stop and remove ALL containers, volumes and networks created with up
+   docker-compose logs -f {service} --> displays log outputs from the specified service; if no service is provided display all logs
+   
+   -d option --> run in detached mode, leaving you able to use the terminal (eg: docker-compose docker-compose-mycompose.yml up -d)
+
+Notes:
+ 
+   After a docker-compose down some containers may hang causing errors or unexpected behaviours on subsequent runs.
+   Use docker ps and docker stop in such cases to identify and stop the conatiners causing conflicts.    
