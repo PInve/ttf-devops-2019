@@ -1,0 +1,14 @@
+We developed a solution to this exercise as a team activity.
+
+The repository in which you can find our implementation (aka "solution") of what's been required is:
+
+ 
+https://github.com/Mcri/ttf-devops-2019/tree/master/esercizi/microservices
+
+
+The members of my team were:
+
+- Invernizzi Paolo (me)
+- Accettura Mariacristina (the above repository owner)
+- Meneghetti Marco
+- Samà Andrea
